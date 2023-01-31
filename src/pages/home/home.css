@@ -1,0 +1,258 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    
+} */
+
+.home-response{
+    display: none;
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 18rem auto 20rem;
+    gap: 1rem;
+    height: 100%;
+    /* z-index: ; */
+}
+
+
+@media(max-width:1250px){
+    
+    .home{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 18rem auto 20rem;
+        height: 100%;
+    }
+
+}
+
+@media(max-width:1150px){
+    
+    .home{
+       display: none;
+    }
+
+    .home-response{
+        display: block;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .home-response > div {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .home-response .home_smile_response .profile-side{
+        width: 35%;
+    }
+
+    .home-response .home_smile_response .profile-side .profile-card .profile-name{
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: left;
+    }
+
+    .home-response .home_smile_response .post-side{
+        width: 60%;
+    }
+
+    .rightSide{
+        display: none;
+    }
+    
+    .post-share {
+        width: 100%;
+    }
+
+    .post-share>div>input{
+        width: 90%;
+    }
+
+    .post-options{
+        width: 70%;
+    }
+
+    .ps-button {
+        padding: 7px 14px;;
+        font-size: 12px;
+    }
+
+    .trend-car{
+        display: none;
+    }
+    
+}
+
+
+@media(max-width:900px){
+    
+    .home-response .home_smile_response .profile-side{
+        width: 35%;
+    }
+
+    .home-response .home_smile_response .post-side{
+        width: 60%;
+    }
+    
+    .post-share {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .post-share>div>input{
+        width: 90%;
+    }
+
+    .post-options{
+        width: 70%;
+    }
+
+    .ps-button {
+        padding: 7px 14px;;
+        font-size: 12px;
+    }
+
+  }
+  
+@media(max-width:800px){
+
+    .home-response{
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    .home-response .home_smile_response {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-response .home_smile_response .profile-side{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .home-response .home_smile_response .profile-side .logo-search{
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .home-response .home_smile_response .profile-side .logo-search > img {
+        width: 60px;
+        display: none;
+    }
+
+    .home-response .home_smile_response  .profile-side .logo-search > .search{
+        height: 50px;
+        padding: 5px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .home-response .home_smile_response .profile-side .followers-card{
+        display: none;
+    }
+
+    .home-response .home_smile_response .post-side{
+        width: 100%;
+    }
+
+  }
+  
+@media(max-width:700px){
+    .home-response .home_smile_response .post-side{
+        width: 100%;
+    }
+
+  }
+  
+@media (max-width:600px){    
+   
+
+  }
+  
+  
+@media (max-width:500px){
+    
+
+    .home-response .home_smile_response .post-side{
+        margin: auto;
+        width: 80%;
+    }
+
+    .home-response .home_smile_response .profile-side{
+        width: 80%;
+        margin: auto;
+    }
+
+    .post-share {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .post-share>div>input{
+        margin: auto;
+        width: 100%;
+    }
+
+    .post-options{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .ps-button{
+        font-size: 14px;
+        padding: 7px 14px;
+        margin-top: 15px;
+    }
+  
+  }
+  
+@media (max-width:400px){
+    .home-response .home_smile_response .post-side{
+        margin: auto;
+        width: 95%;
+    }
+
+    .post-share{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .post-share > div {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .post-options{
+        flex-wrap: wrap;
+    }
+
+    .home-response .home_smile_response .profile-side{
+        width: 95%;
+        margin: auto;
+    }
+    
+
+}

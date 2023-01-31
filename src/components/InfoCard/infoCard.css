@@ -1,0 +1,29 @@
+.info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--cardBody);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 90%;
+}
+
+.info-head {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.info-head>div:hover {
+    cursor: pointer;
+}
+
+.works-dot{
+    position: absolute;
+    top: 235px;
+    left: 270px;
+    font-weight: 900;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}

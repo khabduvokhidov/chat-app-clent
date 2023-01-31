@@ -1,0 +1,184 @@
+.followers-card {
+  width: 100%;
+  height: 80vh;
+  overflow: scroll;
+  border-radius: 0.7rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+.follower{
+  border: 1px solid #0000002f;
+  padding: 4px 7px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.converstation{
+  cursor: pointer;
+}
+
+.follower>div{
+  display: flex;
+  gap: 10px;
+}
+
+
+.followerImage{
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+}
+
+.name{
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.name>span:nth-of-type(1){
+  font-weight: bold;
+  font-size: 13px;
+}
+
+
+
+.fc-button{
+  margin-top: 10px;
+  height: 2rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.UnfollowButton{
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  cursor: pointer;
+  background: transparent;
+}
+
+
+.followers-card > span{
+  font-weight: bold;
+  color: orange;
+  align-self: center;
+  cursor: pointer;
+}
+
+.mantine-Modal-modal {
+  height: 100%;
+  overflow: scroll;
+}
+
+.follewr_btn_box{
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  flex-direction: column;
+}
+
+.follower_link_chat{
+  border: 1px solid #358ff9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: linear-gradient(#24e4f0,#358ff9);
+  padding: 0px 14px;
+  height: 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  /* transition: all 0.3s ease-out; */
+}
+
+.follower_link_chat:hover{
+  background: transparent;
+}
+
+.chat_image{
+  width: 15px;
+}
+
+.del-btn{
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease-out;
+  padding: 4px 8px;
+  background: red;
+  cursor: pointer;
+  margin: 5px;
+  text-align: end;
+}
+
+.del-btn:hover{
+  background: transparent;
+  border: 1px solid red;
+  color: red;
+}
+
+@media(max-width:1250px){
+
+}
+
+@media(max-width:1150px){
+  .mantine-Modal-modal{
+    height: 75%;
+    width: 80%;
+  }
+
+  .mantine-Modal-modal .mantine-l553vn .post-share{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .mantine-Modal-modal .mantine-l553vn .post-share div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 1rem;
+  }
+}
+
+
+@media(max-width:900px){
+
+}
+  
+@media(max-width:800px){
+
+}
+  
+@media(max-width:700px){
+  .mantine-Modal-modal{
+    height: 55%;
+    width: 60%;
+  }
+}
+  
+  
+@media (max-width:500px){
+  .mantine-Modal-modal{
+    height: 80%;
+    width: 100%;
+  }
+}
+  
+@media (max-width:400px){
+  .fc-button{
+    margin-top: 12px;
+  }
+
+
+}
