@@ -11,14 +11,12 @@ import "./chat.css"
 
 export const Chat = () => {
   const socket = useRef()
-  const {user, render} = useInfoContext()
-
+  const {user, render, mobile, setMobile} = useInfoContext()
   const [chats, setChats] = useState([])
   const [onlineUsers, setOnlineUsers] = useState([])
   const [currentChat, setCurrentChat] = useState(null)
   const [sendMessage, setSendMessage] = useState(null)
   const [receivedMessage, setReceivedMessage] = useState(null)
-
 
 
   // Get the chat in the sections
@@ -71,17 +69,23 @@ export const Chat = () => {
   return (
     <div className='chat'>
       {/* left side */}
-      <div className="left-side-chat">
+      <div className={mobile ? "left-side-chat_none" : "left-side-chat"}>
         <LogoSearch />
 
-        <div className="chat-container">
-          <h2>Chats</h2>
-          <div className="chat-list">
+        <div className={mobile ? "chat-list_mobile" : "chat-container"}>
+          <div className="chat_nav_text">
+            <h2>Chats</h2>
+            <h3> {user?.fristname} </h3>
+          </div>
+          <hr />
+          <div className={"chat-list"}>
             {
               chats.map((chat, i) => {
                 return(
                   <div key={i} onClick={()=>setCurrentChat(chat)}>
-                    <Conversation data={chat} currentUser={user._id} online={checkOlineStatus(chat)} />
+                    <div onClick={()=> setMobile(!mobile)} >
+                      <Conversation data={chat} currentUser={user._id} online={checkOlineStatus(chat)} />
+                    </div>
                   </div>
                 )
               })
@@ -91,8 +95,8 @@ export const Chat = () => {
       </div>
 
       {/* right side */}
-      <div  className={"right-side-chat"}>
-        <div style={{width: "20rem", alignSelf: "flex-end"}}>
+      <div  className={mobile ? "right-side-chat_none" : "right-side-chat"}>
+        <div className='NavIcon_diplay_none' style={{width: "20rem", alignSelf: "flex-end"}}>
           <NavIcons />
         </div>
         <ChatBox chat={currentChat} currentUser={user._id} setSendMessage={setSendMessage} receivedMessage={receivedMessage}/>

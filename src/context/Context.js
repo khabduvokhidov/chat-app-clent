@@ -20,6 +20,8 @@ export const InfoProvider = ({children}) => {
 
     const [render, setRender] = useState(true)
 
+    const [mobile, setMobile] = useState(false)
+
     const [posts, setPosts] = useState([])
 
     // get posts
@@ -44,7 +46,9 @@ export const InfoProvider = ({children}) => {
         modalOpened,
         setModalOpened,
         render, 
-        setRender
+        setRender,
+        mobile, 
+        setMobile
     }
 
     return (

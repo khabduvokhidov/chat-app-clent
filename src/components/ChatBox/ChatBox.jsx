@@ -4,12 +4,13 @@ import { useInfoContext } from '../../context/Context'
 import {addMessage, getMessages} from "../../api/MessageRequests"
 import {format} from "timeago.js"
 import InputEmoji from "react-input-emoji"
+import { UilMessage } from '@iconscout/react-unicons'
 import { useRef } from 'react'
 
 import "./ChatBox.css"
 
 export const ChatBox = ({chat, currentUser, setSendMessage, receivedMessage}) => {
-  const {serverPublic} = useInfoContext()
+  const {serverPublic, mobile, setMobile} = useInfoContext()
   const [userData, setUserData] = useState(null)
   const [messages, setMessages] = useState([])
   const [newMessage, setNewMessage] = useState("")
@@ -90,18 +91,22 @@ export const ChatBox = ({chat, currentUser, setSendMessage, receivedMessage}) =>
 
   return (
     <>
-      <div className="chatbox-container">
+      <div className={ mobile ? "chatbox-container_mobile" : "chatbox-container" }>
         {
           chat ? (
             <>
               {/* chat header */}
               <div className="chat-header">
                 <div className="followerss">
-                  <div>
+                  <div className='followerss_smile'>
                     <img src={userData?.profileImage ? serverPublic + userData.profileImage : serverPublic + "defaultProfile.png"} alt="profile" className="followersImage" style={{width: '50px', height: '50px'}}/>
+
+                    <div className="name" style={{fontSize:"16px"}}>
+                      <span>{userData?.firstname} {userData?.lastname}</span>
+                    </div>
                   </div>
-                  <div className="name" style={{fontSize:"16px"}}>
-                    <span>{userData?.firstname} {userData?.lastname}</span>
+                  <div onClick={()=> setMobile(!mobile)} className="box-back">
+                    <h4>Back</h4>
                   </div>
                 </div>
                 <hr style={{width: "100%", border: "1px solid #ececec", marginTop: "20px"}} />
@@ -122,15 +127,18 @@ export const ChatBox = ({chat, currentUser, setSendMessage, receivedMessage}) =>
               </div>
 
               {/* chat sender */}
+
               <div className="chat-sender">
-                <div onClick={()=> imageRef.current.click()}>+</div>
+                
+                <div id='file_galerey' onClick={()=> imageRef.current.click()}>+</div>
+                
                 <InputEmoji value={newMessage} onChange={handleChange}/>
-                <button className="send-button button" onClick={handleSend}>
-                  Send
-                </button>
 
                 <input type="file" name='messageFile' style={{display: 'none'}} ref={imageRef}/>
 
+                <button type='submit' className="send-button button" onClick={handleSend}>
+                  <UilMessage />
+                </button>
               </div>
             </>
           ) : (
