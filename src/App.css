@@ -162,6 +162,7 @@ body{
     height: 32px;
     align-self: center;
     margin-top: 15px;
+    margin-left: 0;
 }
 }
   
@@ -185,10 +186,8 @@ body{
   }
   
   .info-form{
-    padding-top: 10px;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
+    width: 100%;
+    padding: 15px 20px;
   }
 
 }

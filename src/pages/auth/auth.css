@@ -107,4 +107,8 @@
   .auth-form{
     padding-top: 10px;
   }
+
+  .info-btn{
+    margin: 0;
+  }
 }
