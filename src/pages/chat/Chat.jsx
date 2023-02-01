@@ -31,11 +31,11 @@ export const Chat = () => {
     }
 
     getChats()
-  }, [user._id, render])
+  }, [user?._id, render])
 
   // connect to socket.io
   useEffect(()=> {
-    socket.current = io("ws://localhost:8801")
+    socket.current = io("https://hat-app-socket.onrender.com")
 
     socket.current.emit("new-user-add", user._id)
 

@@ -7,7 +7,7 @@ export const useInfoContext = () => useContext(InfoContext)
 
 export const InfoProvider = ({children}) => {
     
-    const serverPublic = "http://localhost:4000/"
+    const serverPublic = "https://chat-app-backend-1cbh.onrender.com/"
 
 
     const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")) || null)

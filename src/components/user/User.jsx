@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { followUser, getUser, unfollowUser } from '../../api/UserRequests'
 import chat from "../../images/comment.png"
 import { useInfoContext } from '../../context/Context'
-import { userAddChat, userChats } from '../../api/ChatRequests'
+import { userAddChat} from '../../api/ChatRequests'
 
 export default function User({person}) {
 
@@ -44,7 +44,7 @@ export default function User({person}) {
     }
 
   return (
-    <Link to="#" className='follower'>
+    <Link to="#"className='follower'>
         
         <div>
             <img src={

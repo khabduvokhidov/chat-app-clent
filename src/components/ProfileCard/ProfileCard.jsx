@@ -21,8 +21,8 @@ export default function ProfileCard({location}) {
       </div>
 
       <div className="profile-name">
-        <span> {user.fristname} {user.lastname} </span>
-        <span> {user.worksAt ? user.worksAt : "write about yourself"} </span>
+        <span> {user?.fristname} {user?.lastname} </span>
+        <span> {user?.worksAt ? user?.worksAt : "write about yourself"} </span>
       </div>
       <div className="follow-status">
        <hr />

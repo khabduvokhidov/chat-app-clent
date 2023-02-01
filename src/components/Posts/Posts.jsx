@@ -8,16 +8,14 @@ import "./posts.css"
 
 export const Posts = () => {
   const params = useParams()
-  const {user, posts, loading} = useInfoContext()
+  const { posts, loading} = useInfoContext()
 
   let filteredPosts = []
 
   if(posts.length === 0) return "No Posts"
 
   if(params.id) {
-    console.log(params.id);
     filteredPosts = posts.filter((post)=> post.userId === params.id)
-    console.log(filteredPosts);
   } else {
     filteredPosts = posts
   }
