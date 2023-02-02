@@ -42,7 +42,7 @@ body{
 .App{
     overflow: hidden;
     color: var(--black);
-    background: #f3f3f3;
+    background: #f3f3f300;
     padding: 10px;
     /* padding-bottom: 30px; */
     min-height: 100%;

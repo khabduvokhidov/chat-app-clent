@@ -20,7 +20,7 @@ export default function NavIcons() {
             <img src={Home} alt="home_icon" />
         </Link>
 
-        <Link to="/" className='nav_icon_setting' >
+        <Link to="/settings" className='nav_icon_setting' >
            <UilSetting  className="settings-nav" alt="settings_icon" />
         </Link>
 

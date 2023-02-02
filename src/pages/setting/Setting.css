@@ -1,0 +1,147 @@
+.settings-section{
+    background: #f3f3f36b;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.setiing-nav .nav-icons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.setiing-nav .nav-icons a{
+    margin: 0 15px;
+}
+
+.setting-box {
+    display: flex;
+    justify-content: center;
+    border: 2px solid #7e7878;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.setting-smile_box{
+    display: flex;
+    align-content: flex-start;
+    justify-content: left;
+    border-right: 2.5px solid #7e7878;
+    width: 20%;
+}
+
+.setting-update_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 75%;
+    height: 100%;    
+}
+
+.setting-list{
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+}
+
+.setting-iteam{
+    border-left: 2.5px solid transparent;
+    width: 100%;
+    padding: 15px 40px;
+    transition: .3s;
+    cursor: pointer;
+}
+.setting-iteam.actve{
+    border-left: 2.5px solid #000;
+    background: #e9e6e6b7;
+}
+
+.setting-iteam:hover{
+    border-left: 2.5px solid #000;
+    background: #f3f3f3;
+}
+
+.setting-iteam:disabled,
+.setting-iteam[disabled]{
+  background-color: #f3f3f38c;
+  position: relative;
+}
+
+.setting-iteam[disabled]::before{
+    content: "скоро";
+    position: absolute;
+    border: 1px solid #ff0000;
+    width: 45px;
+    height: 18px;
+    right: 0px;
+    bottom: 32px;
+    background: #ff0000;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.setting-iteam .setting-link{
+    transition: .3s;
+    border-bottom: 1px solid transparent;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.setting-iteam.actve .setting-link{
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+}
+
+.setting-iteam:hover .setting-link{
+    border-bottom: 1px solid rgb(13, 1, 70);
+}
+
+@media(max-width:1150px){
+
+    .settings-section .r-button {
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      background: var(--buttonBg);
+      transition: all 0.3s ease-out;
+      width: 35px;
+      height: 35px;
+      margin: 0;
+    }
+}
+  
+  
+@media(max-width:900px){
+
+}
+
+@media(max-width:800px){
+    .setting-smile_box{
+        display: none;
+    }
+
+    .setting-update_box{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+}
+  
+@media (max-width:400px){
+    .setting-update_box{
+        width: 100%;
+        padding-bottom: 20px;
+        display: block;
+    }
+}

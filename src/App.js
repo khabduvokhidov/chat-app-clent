@@ -7,6 +7,7 @@ import {Profile} from './pages/profile/Profile';
 import SearcUsers from './components/searcUsers/SearcUsers';
 
 import './App.css';
+import Setting from './pages/setting/Setting';
 
 function App() {
   const {user} = useInfoContext()
@@ -19,6 +20,8 @@ function App() {
       <Route path='/' element={user ? <Navigate to="/home"/> : <Navigate to="/auth"/> } />
 
       <Route path='/home' element={user ? <Home /> : <Navigate to="/auth" />}  />
+
+      <Route path='/settings' element={user ? <Setting /> : <Navigate to="/auth" />}  />
 
       <Route path='/auth' element={user ? <Navigate to="/home" /> : <Auth />}  />
 

@@ -1,0 +1,97 @@
+.updateProfile{
+    height: 100%;
+    padding: 10px;
+}
+
+.info-update-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.info-update-form h3{
+    font-size: 35px;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+}
+
+.UpdateProfile_input{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 20px 0;
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.UpdateProfile_input_texts{
+    width: 100%;
+}
+
+.info-update-form .info-btn{
+    width: 95%;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+}
+
+.UpdateProfile_input_option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width:900px){
+
+}
+
+@media(max-width:800px){
+    .setting-smile_box{
+        display: none;
+    }
+
+    .setting-update_box{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width:500px){
+    .UpdateProfile_input.fx{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .UpdateProfile_input_option{
+        margin: 5px 0px;
+    }
+
+    .UpdateProfile_input_texts{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 97%;
+    }
+}
+  
+@media (max-width:400px){
+    .UpdateProfile_input{
+        flex-direction: column;
+        gap: 0;
+        margin: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
